@@ -1,0 +1,96 @@
+:root {
+  --color-primary: #2c2c2c; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 112.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 35%; } }
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.6;
+  position: relative; }
+
+.container {
+  height: 100vh;
+  background-image: url(../img/img-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff; }
+
+.type__element,
+.typed-cursor {
+  font-family: 'Kalam', cursive;
+  font-size: 8rem; }
+  @media only screen and (max-width: 37.5em) {
+    .type__element,
+    .typed-cursor {
+      text-align: center;
+      font-size: 7.2rem;
+      margin: 0 5px; } }
+
+.hero {
+  transform: translateY(-10%);
+  margin-left: 12rem;
+  height: 110%;
+  color: var(--color-primary);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      text-align: center;
+      align-items: center;
+      margin-left: 0; } }
+
+.social_list {
+  margin-top: 3rem;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: .5rem; }
+  .social_list__icon-box {
+    position: relative;
+    cursor: pointer; }
+  .social_list__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    fill: var(--color-primary); }
+    @media only screen and (max-width: 112.5em) {
+      .social_list__icon {
+        justify-content: center;
+        width: 4rem;
+        height: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .social_list__icon {
+        justify-content: center;
+        width: 6rem;
+        height: 6rem; } }
+  .social_list__item:not(:last-child) {
+    margin-right: 2rem; }
+  @media only screen and (max-width: 112.5em) {
+    .social_list {
+      justify-content: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .social_list {
+      position: absolute;
+      bottom: 0; } }

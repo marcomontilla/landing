@@ -1,0 +1,66 @@
+.hero {
+	transform: translateY(-10%);
+	margin-left: 12rem;
+	height: 110%;
+	color: var(--color-primary);
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: flex-start;
+
+	@include respond(small) {
+		text-align: center;
+		align-items: center;
+		margin-left: 0;
+	}
+}
+
+.social_list {
+	margin-top: 3rem;
+	width: auto;
+	display: flex;
+	justify-content: flex-start;
+
+	list-style: none;
+	padding: .5rem;	
+
+	&__icon-box {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__icon {
+		width: 2.25rem;
+		height: 2.25rem;
+		fill: var(--color-primary);
+
+		@include respond(medium) {
+			justify-content: center;
+			width: 4rem;
+			height: 4rem;
+		}
+
+		@include respond(small) {
+			justify-content: center;
+			width: 6rem;
+			height: 6rem;
+		}
+
+	}
+	
+	&__item {		
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+
+	@include respond(medium) {
+		justify-content: center;
+	}
+
+	@include respond(small) {
+		position: absolute;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,11 @@
+.type__element,
+.typed-cursor {
+	font-family: 'Kalam', cursive;
+	font-size: 8rem;
+
+	@include respond(small) {
+		text-align: center;
+		font-size: 7.2rem;
+		margin: 0 5px;
+	}
+}

@@ -1,0 +1,62 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint==small {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==medium {
+		@media only screen and (max-width: 112.5em) {
+			@content;
+		}
+	}
+}
+
+:root {
+	// COLOR VARIABLES
+	--color-primary: #2c2c2c;
+}
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	@include respond(medium) {
+		font-size: 50%;
+	}
+
+	@include respond(small) {
+		font-size: 35%;
+	}
+}
+
+body {
+	font-family: var(--font-primary);
+	font-weight: 300;
+	line-height: 1.6;
+	position: relative;
+}
+
+.container {
+	height: 100vh;
+
+	background-image: url(../img/img-1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
