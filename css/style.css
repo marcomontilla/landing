@@ -22,7 +22,8 @@ body {
   font-family: var(--font-primary);
   font-weight: 300;
   line-height: 1.6;
-  position: relative; }
+  position: relative;
+  background-color: #EEEEF8; }
 
 .container {
   height: 100vh;
@@ -45,6 +46,26 @@ body {
       text-align: center;
       font-size: 7.2rem;
       margin: 0 5px; } }
+
+.pen-heading {
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-size: 4.5rem;
+  margin: 5rem auto 3rem auto; }
+
+.pen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  flex-flow: row wrap; }
+  .pen > * {
+    width: 55rem;
+    margin: 1rem; }
+  .pen-3 {
+    width: 112rem; }
 
 .hero {
   transform: translateY(-10%);
