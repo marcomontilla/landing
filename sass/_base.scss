@@ -29,16 +29,10 @@ $font-display: "Josefin Sans", sans-serif;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
 
   @include respond(medium) {
     font-size: 50%;
-  }
-
-
-  @include respond(small) {
-    font-size: 35%;
   }
 }
 
@@ -50,12 +44,27 @@ body {
   background-color: #EEEEF8;
 }
 
-.container {
+header {
+	box-sizing: border-box;
+	position: relative;
+
   height: 100vh;
   background-image: url(../img/img-1.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left bottom;
   background-repeat: no-repeat;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  justify-items: flex-start;
+
+  & > * {
+    margin-left: 10rem;
+
+    @include respond(small) {
+			margin: 0 2rem;
+		}
+  }
 }
 
 ::selection {

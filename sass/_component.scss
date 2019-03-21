@@ -1,3 +1,49 @@
+.social_list {
+  display: flex;
+  width: auto;
+  list-style: none;
+  margin-top: 3rem;
+  padding: 0 .5rem;
+
+  @include respond(small) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  &__icon-box {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    fill: var(--color-primary);
+
+    @include respond(medium) {
+      width: 4.25rem;
+      height: 4.25rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  @include respond(medium) {}
+
+
+  @include respond(small) {}
+}
+
 .pen-heading {
   width: 100%;
   flex: 1;
@@ -18,8 +64,36 @@
     width: 55rem;
     margin: 1rem;
   }
+}
 
-  &-3 {
-    width: 112rem;
+.logo {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 3rem;
+
+  @include respond(small) {
+    margin: 1rem;
+  }
+
+
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  &__icon {
+    height: 8rem;
+    width: 8rem;
+    margin-bottom: -3px;
+
+    @include respond(small) {
+      height: 5rem;
+      width: 5rem;
+      margin: 1px;
+    }
   }
 }
