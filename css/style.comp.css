@@ -85,6 +85,7 @@ header {
     margin-right: 2rem; }
 
 .logo {
+  opacity: .5;
   z-index: 1000;
   position: fixed;
   bottom: 0;
