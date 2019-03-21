@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #2c2c2c; }
+  --color-primary: #FFF; }
 
 *,
 *::before,
@@ -9,28 +9,35 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%; }
   @media only screen and (max-width: 112.5em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 35%; } }
 
 body {
   font-family: var(--font-primary);
   font-weight: 300;
   line-height: 1.6;
   position: relative;
-  background-color: #EEEEF8; }
+  background-color: #FFF; }
 
-.container {
+header {
+  box-sizing: border-box;
+  position: relative;
   height: 100vh;
-  background-image: url(../img/img-1.jpg);
+  background-image: url(../img/img-4.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  justify-items: flex-start; }
+  header > * {
+    margin-left: 10rem; }
+    @media only screen and (max-width: 37.5em) {
+      header > * {
+        margin: 0 2rem; } }
 
 ::selection {
   background-color: var(--color-primary);
@@ -39,79 +46,70 @@ body {
 .type__element,
 .typed-cursor {
   font-family: 'Kalam', cursive;
-  font-size: 8rem; }
+  font-size: 8rem;
+  color: var(--color-primary); }
   @media only screen and (max-width: 37.5em) {
     .type__element,
     .typed-cursor {
       text-align: center;
-      font-size: 7.2rem;
+      font-size: 6.2rem;
       margin: 0 5px; } }
 
-.pen-heading {
-  width: 100%;
-  flex: 1;
-  text-align: center;
-  font-family: 'Kalam', cursive;
-  font-size: 4.5rem;
-  margin: 5rem auto 3rem auto; }
-
-.pen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  flex-flow: row wrap; }
-  .pen > * {
-    width: 55rem;
-    margin: 1rem; }
-  .pen-3 {
-    width: 112rem; }
-
-.hero {
-  transform: translateY(-10%);
-  margin-left: 12rem;
-  height: 110%;
-  color: var(--color-primary);
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: flex-start; }
-  @media only screen and (max-width: 37.5em) {
-    .hero {
-      text-align: center;
-      align-items: center;
-      margin-left: 0; } }
-
 .social_list {
-  margin-top: 3rem;
-  width: auto;
   display: flex;
-  justify-content: flex-start;
+  width: auto;
   list-style: none;
-  padding: .5rem; }
+  margin-top: 3rem;
+  padding: 0 .5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .social_list {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; } }
   .social_list__icon-box {
     position: relative;
     cursor: pointer; }
   .social_list__icon {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
     fill: var(--color-primary); }
     @media only screen and (max-width: 112.5em) {
       .social_list__icon {
-        justify-content: center;
-        width: 4rem;
-        height: 4rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .social_list__icon {
-        justify-content: center;
-        width: 6rem;
-        height: 6rem; } }
+        width: 4.25rem;
+        height: 4.25rem; } }
   .social_list__item:not(:last-child) {
     margin-right: 2rem; }
-  @media only screen and (max-width: 112.5em) {
-    .social_list {
-      justify-content: center; } }
+
+.logo {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 3rem;
+  transition: all 1s linear;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
   @media only screen and (max-width: 37.5em) {
-    .social_list {
-      position: absolute;
-      bottom: 0; } }
+    .logo {
+      margin: 1rem;
+      bottom: 91.5%; } }
+  .logo__icon {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin: auto -5px;
+    margin-bottom: -5px; }
+    @media only screen and (max-width: 37.5em) {
+      .logo__icon {
+        height: 4.5rem;
+        width: 4.5rem;
+        margin: 1px;
+        margin: auto -1px;
+        margin-bottom: -1.2px; } }

@@ -3,6 +3,8 @@
 	font-family: 'Kalam', cursive;
 	font-size: 8rem;
 
+	color: var(--color-primary);
+
 	@include respond(small) {
 		text-align: center;
 		font-size: 6.2rem;
